@@ -20,13 +20,13 @@
 * Multiple feature detectors are then applied to the input image to generate corresponding Feature Maps. 
 * These Feature Maps form the first Convolutional Layer.
 * To this Convolution Layer, rectified linear unit activation is applied to increase non-linearity in the CNN Model.
-* Max Pooling is applied to the convolution layer to get a set of Pooled Feature Maps which makes up the Pooled Layer.
+* Max Pooling is applied to convolution layer to get a set of Pooled Feature Maps which makes up Pooled Layer.
 * Multiple such Convolutional and Pooled Layers one after the other are called the hidden layers.
 * Flatten function converts the Pooled Feature Maps into numpy vectors that are accepted by ANN.
 * The ANN consists of fully connected (dense) hidden layers.
-* To deal with Bias-Variance tradeoff, k-fold cross validation is implemented to calculate the variance in accuracy of k trainings.
-* Inorder to reduce overfitting, Dropout Regularization is used to randomly deactivate neurons in each hidden layer to reduce dependencies.
-* For Hyperparameter Tuning, Grid-Search Cross Validation is used to predict the best set of hyperparameters which lead to max accuracy.
+* For Bias-Variance tradeoff, k-fold cross validation is implemented to calculate the variance in accuracy of k trainings.
+* To reduce overfitting, Dropout Regularization is used to randomly deactivate neurons & reduce dependencies.
+* For Hyperparameter Tuning, Grid-Search Cross Validation is used to predict the best set of hyperparameters.
 * Because of such a deep classification model, we need to have excellent computational power for training on a huge dataset.
 * This is where cloud computation on Kaggle leveraging GPU comes into the picture.
 ## How To Use
