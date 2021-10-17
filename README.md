@@ -32,6 +32,23 @@
 
 ## How To Use
 
+1. Download all the python modules as mentioned in the file ‘requirements.pdf’.
+2. Open the folder titled ‘Dr.FarmAI’ .
+3. Execute the file titled ‘run.py’ using a suitable Python IDE.
+4. Once the address of the running localhost port is displayed on the Python
+Console, open any suitable browser and browse to that localhost address. Eg.
+Running on​ ​http://127.0.0.1:5000/
+5. Now you would be directed to the home page of our website.
+6. Click on the ‘Register’ tab to create a new account.
+7. Click on the ‘Login’ tab and fill all the registered details.
+8. After successful login, click on the ‘Start Analysis’ tab.
+9. Select any mode of analysis from the two options : Nearby Analysis & Farby
+Analysis.
+10.Incase of Nearby Analysis, choose a Plant and then upload an image belonging
+to any class of that particular plant’s dataset. Click on ‘Predict’ Button to see the
+analysis results.
+11.Incase of Farby Analysis, choose an image belonging to a particular class from
+the Farby dataset and click on ‘Predict’ Button to see the analysis results. 12.Click on the ’Solutions’ tab to seek the solutions for the detected disease.
 
 ## Demo
 
