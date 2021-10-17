@@ -24,10 +24,10 @@
 * Multiple such Convolutional and Pooled Layers one after the other are called the hidden layers.
 * Flatten function converts the Pooled Feature Maps into numpy vectors that are accepted by ANN.
 * The ANN consists of fully connected (dense) hidden layers.
-* For Bias-Variance tradeoff, k-fold cross validation is implemented to calculate the variance in accuracy of k trainings.
+* For Bias-Variance tradeoff, k-fold cross validation is implemented (variance in accuracy of k trainings).
 * To reduce overfitting, Dropout Regularization is used to randomly deactivate neurons & reduce dependencies.
 * For Hyperparameter Tuning, Grid-Search Cross Validation is used to predict the best set of hyperparameters.
-* Because of such a deep classification model, we need to have excellent computational power for training on a huge dataset.
+* Because of such a deep CNN model, we need to have excellent computational power for training on a huge dataset.
 * This is where cloud computation on Kaggle leveraging GPU comes into the picture.
 ## How To Use
 
