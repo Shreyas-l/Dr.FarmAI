@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section" style="background-image: url({{ url_for('static', filename='images/images-4.jpeg')}}) ">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ url_for('static',filename='images/profile_pics/default1.jpg')}}">
+        <div class="media-body">
+          <h2 class="account-heading" style="color: white">{{ current_user.username }}</h2>
+          <p  style="color: white">{{ current_user.email }}</p>
+        </div>
+      </div>
+      {% for post in posts %}
+		<article class="media content-section" style="background-image: url({{ url_for('static', filename='images/images-5.jpeg')}}) ">
+      <img class="rounded-circle article-img" src="{{ url_for('static',filename='images/profile_pics/default1.jpg')}}">
+  		<div class="media-body">
+    		<div class="article-metadata">
+      		<a class="mr-2" href="#">{{ post.author.username }}</a>
+      		<small style="color: white">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+    		</div>
+    	<h2><a class="article-title" href="{{ url_for('post',post_id=post.id) }}">{{ post.title }}</a></h2>
+    	<p class="article-content">{{ post.content }}</p>
+  		</div>
+		</article>
+	{% endfor %}
+  </div>
+
+{% endblock %}
+
+
+    

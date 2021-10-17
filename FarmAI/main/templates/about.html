@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main5.css') }}">
+
+    {% if title %}
+        <title>Dr.FarmAI - {{ title }}</title>
+    {% else %}
+        <title>Dr.FarmAI</title>
+    {% endif %}
+</head>
+<style>
+.mySlides {display:none;
+background:url({{url_for('static',filename='images/try.png')}});}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.w3-left-align{text-align:left!important}
+.w3-right-align{text-align:right!important}
+</style>
+<body >
+ 
+    <header class="site-header" style="background: #024B1B">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="background: #024B1B" >
+        <div class="container"> 
+          <a class="navbar-brand mr-4" href="/">Dr.FarmAI</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav" >
+              {% if current_user.is_authenticated %}
+                <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
+                <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+                <a class="nav-item nav-link" href="{{ url_for('static', filename='analysis.html') }}">Start Analysis</a>
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+
+<div class="w3-content w3-display-container" style="max-width:100%;">
+  <div class="mySlides"></div>  
+  <img class="mySlides" src="{{url_for('static',filename='images/home2.png')}}" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle " style="width:100%">
+    <div class="w3-left w3-hover-text-khaki w3-animate-fading" onclick="currentDiv(1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki w3-animate-fading" onclick="currentDiv(-1)" >&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white " onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white " onclick="currentDiv(2)"></span>
+  </div>
+</div>
+<div style="overflow: auto; padding-top: 5%;">
+  <img src="{{url_for('static',filename='images/farmer.jpg')}}" style="float: left;">
+  <h1>No. of Farmers in India</h1>
+  <h1>118.7 Million</h1>
+</div>
+
+<div style="margin-top: 30px;">
+  <img src="{{url_for('static',filename='images/1234.gif')}}" style="height: 150px; width: 150px; overflow: auto; float: right;">
+  <div class="para1"><p>Recognizing the problems of cultivation and dealing properly with them is a difficult task for the farmer and the agronomist. However, their importance for the productive and economic success of the agricultural enterprise is indisputable. Appropriate plant protection measures are crucial to address pathogens that cause disease and damage to plants. Appropriate and timely recognition of the agents (insects, mites, fungi, bacteria, nematodes), diagnosis of the problem and selection of active substances / products brings the desired results. </p></div>
+</div>
+<div>
+  <video class="video" width="800" height="300" controls autoplay muted loop="infinite">
+  <source src="{{url_for('static',filename='videos/vid1.mp4')}}" type="video/mp4">
+  </video>
+
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+<footer id="footer" style="margin-top: 12%;">
+            <div class="container">
+                <center>
+                    Copyright © Dr.FarmAI | All Rights Reserved | Contact Us: +91 90000 00000 
+                </center>
+            </div>
+        </footer>
+</body>
+

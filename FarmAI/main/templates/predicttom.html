@@ -1,0 +1,115 @@
+<html>
+<head>
+
+	<link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<title>Nearby Disease Analysis </title>
+	
+
+	<style>
+.jumbotron{
+	margin-top: 10%;
+    filter: background-blur(25px); 
+    background-color: rgba(0 ,0 ,0 ,0.7); 
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 3px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 8%;
+    color: white;
+}
+
+
+</style>
+</head>
+
+<body style="background-image: url({{url_for('static',filename='images/images.jpeg')}})">
+	
+    <header class="site-header" style="background: #024B1B">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top"  style="background: #024B1B">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">Dr. FarmAI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="{{url_for('home')}}">Home</a>
+          <a class="nav-item nav-link" href="{{url_for('about')}}">About</a>
+          <a class="nav-item nav-link" href="{{url_for('solutions')}}">Solutions</a>
+        </div>
+      </div>
+    </div>
+  	</nav>
+	</header>
+
+
+	<main role="main">
+		<div class="container">
+		<div class="jumbotron">
+  	<div class="row" >
+  		
+    <div class="col-md-4" style="margin-left: 34%;">
+    <br><br><br><br>
+    <center>
+
+	<label for="image-selector" class="custom-file-upload">
+    <i class="fa fa-cloud-upload" ></i><button >Custom Upload</button>
+    </label>
+    <input id="image-selector" type="file">
+	<br><button  id="predict-button" class="predict-button btn btn-success btn-lg" style="margin-top: 10%;" >Predict</button></input>
+	<p style="font-weight:bold; color: white;" >Predictions </p>
+	<p style="color: white">TOMATO LATE BLIGHT : <span id="tomato-late-prediction" ></span></p>
+	<p style="color: white">TOMATO HEALTHY: <span id="tomato-prediction"></span></p>
+	<img id="selected-img" src="#"  />	
+	</center>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		let base64Image;
+		function readURL(input) {
+    		if (input.files && input.files[0]) {
+				let reader = new FileReader();
+				reader.onload=function(e){
+					let dataURL=reader.result;
+					 $('#selected-img').attr('src', e.target.result);
+					base64Image = dataURL.replace('data:image/jpeg;base64,','');
+										}
+			reader.readAsDataURL(input.files[0]);
+
+			$("#tomato-late-prediction").text("");
+			$("#tomato-prediction").text("");
+		}}		
+
+		
+		$("#image-selector").change(function(){
+    readURL(this);
+});
+
+		$("#predict-button").click(function(event){
+			let message={
+				image: base64Image
+			}
+			//console.log(message.image);
+			$.post("{{url_for('predict_tom')}}",JSON.stringify(message),function(response){
+				var obj=JSON.parse(response);
+				$("#tomato-late-prediction").text(obj[0].toFixed(6));
+				$("#tomato-prediction").text(obj[1].toFixed(6));
+				console.log(response);
+			});
+		});
+
+	</script>
+    </div>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>

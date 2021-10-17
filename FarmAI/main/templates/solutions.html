@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+<style>
+* {
+  box-sizing: border-box;
+
+}
+body{
+  background-image: linear-gradient(to bottom ,gray,white);
+  
+}
+#myInput {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 30%;
+
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 5px solid black;
+  font-size: 18px;
+  margin-right: 200px;
+  margin-left: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+
+}
+#myTable th{
+  background-color: black;
+}
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color: black;"><center><b><u>Solutions</u></b></center></h2>
+<input class="glyphicon glyphicon-search" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
+
+  <i class="material-icons">search</i>
+<!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> -->
+<!-- <span class="glyphicon glyphicon-search"></span> -->
+</input>
+ 
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%; color: white">Name of the disease</th>
+    <th style="width:90%; color: white">Solutions</th>
+  </tr>
+  <tr>
+    <td>Pepper leaf bacterial spot</td>
+    <td><ul>
+    <li>Insecticides containing copper are
+    also useful in preventing the disease. In most cases, however, once the disease appears, copper
+isn’t effective in treating pepper leaf spots.</li> 
+<li>Use insecticides containing copper early in the
+season when you’ve had problems with the disease in previous years. How to Treat Bacterial
+Leaf Spot Of course, once the symptoms of bacterial leaf spot begin to appear on your pepper
+plants, it’s too late to save them.</li> 
+<li>However, if you take precautions before planting next season,
+you’ll have a better chance of preventing peppery leaf spot problems in the future. Crop rotation
+can help prevent bacterial leaf spot. Do not plant peppers or tomatoes in a location where either
+of these crops has been grown in the past four or five years.</li></ul>
+</td>
+  </tr>
+  <tr>
+    <td>Potato Late Blight</td>
+    <td><ul >
+    <li>Plant resistant cultivars when available.</li>
+<li>Remove volunteers from the garden prior to planting and space plants far enough apart to allow
+for plenty of air circulation.</li>
+<li>Water in the early morning hours, or use soaker hoses, to give plants time to dry out during the
+day — avoid overhead irrigation.</li>
+<li>Destroy all tomato and potato debris after harvest (see Fall Garden Cleanup).</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td>Tomato Late Blight </td>
+    <td><ul>
+      <li>Sanitation is the first step in controlling tomato late blight. Clean up all debris and fallen fruit from the garden area.
+      </li>
+      <li>For the home gardener, fungicides that contain maneb, mancozeb, chlorothanolil or fixed copper can help protect plants from late tomato blight. Repeated applications are necessary throughout the growing season as the disease can strike at any time.
+</li>
+<li>For organic gardeners, there are some fixed copper products approved for use; otherwise, all infected plants must be immediately removed and destroyed.
+</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Grapes Leaf Blight</td>
+    <td><ul>
+      <li>Fungicides sprayed for other diseases in the season may help to reduce this disease.</li>
+      <li> Fungicides Used in Grapes
+
+(azoxystrobin – captan -copper sulfate - fungicidal soap -kresoxim-methyl  -mancozeb )</li>
+    </ul></td>
+  </tr>
+  
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
