@@ -14,6 +14,11 @@
  <div align="center"><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/python.png.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/docker.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/squid.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/spacy.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/gcp_.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/redis.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/postgres.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/k8_.png"/></div>
 </p>
 
+## Demo
+
+https://user-images.githubusercontent.com/58290353/137632130-cc62138d-8061-4b29-b6d1-67910a116ad6.mp4
+
+
 ## CNN Implementation
 
 * The input image is preprocessed using OpenCV and ScikitLearn.
@@ -29,6 +34,7 @@
 * For Hyperparameter Tuning, Grid-Search Cross Validation is used to predict the best set of hyperparameters.
 * Because of the deep CNN, we need to have excellent computational power for training on a huge dataset.
 * This is where cloud computation on Kaggle leveraging GPU comes into the picture.
+
 ## How To Use
 
 1. Download all the python modules as mentioned in the file ‘requirements.pdf’.
@@ -45,9 +51,13 @@
 1. Incase of Farby Analysis, choose an image belonging to a particular class from the Farby dataset and click on ‘Predict’ Button to see the analysis results.
 1. Click on the ’Solutions’ tab to seek the solutions for the detected disease.
 
-## Demo
+## Research Publication
 
-You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+### [Performance Analysis of Optimizers for Plant Disease Classification with Convolutional Neural Networks](https://ieeexplore.ieee.org/document/9487698)
+
+<p>Crop failure owing to pests & diseases are inherent within Indian agriculture, leading to annual losses of 15-25% of productivity, resulting in a huge economic loss. This research analyzes the performance of various optimizers for predictive analysis of plant diseases with a deep learning approach. The research uses Convolutional Neural Networks for the classification of farm/plant leaf samples of 3 crops into 15 classes. The various optimizers used in this research include RMSprop, Adam, and AMSgrad. Optimizers' Performance is visualized by plotting the Training and Validation Accuracy and Loss curves, ROC curves, and Confusion Matrix. The best performance is achieved using Adam optimizer, with the maximum validation accuracy being 98%. This paper focuses on the research analysis proving that plant diseases can be predicted and pre-empted using deep learning methodology with the help of satellite, drone-based or mobile-based images that result in reducing crop failure and agricultural losses.
+</p> 
+
 
 ## License
 
