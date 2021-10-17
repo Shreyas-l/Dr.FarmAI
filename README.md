@@ -19,7 +19,7 @@
 * The input image is preprocessed using OpenCV and ScikitLearn.
 * Multiple feature detectors are then applied to the input image to generate corresponding Feature Maps. 
 * These Feature Maps form the first Convolutional Layer.
-* To this Convolution Layer, rectified linear unit activation function is applied to increase non-linearity in the CNN Model.
+* To this Convolution Layer, rectified linear unit activation is applied to increase non-linearity in the CNN Model.
 * Max Pooling is applied to the convolution layer to get a set of Pooled Feature Maps which makes up the Pooled Layer.
 * Multiple such Convolutional and Pooled Layers one after the other are called the hidden layers.
 * Flatten function converts the Pooled Feature Maps into numpy vectors that are accepted by ANN.
@@ -27,9 +27,8 @@
 * To deal with Bias-Variance tradeoff, k-fold cross validation is implemented to calculate the variance in accuracy of k trainings.
 * Inorder to reduce overfitting, Dropout Regularization is used to randomly deactivate neurons in each hidden layer to reduce dependencies.
 * For Hyperparameter Tuning, Grid-Search Cross Validation is used to predict the best set of hyperparameters which lead to max accuracy.
-* Because of such a deep classification model, we need to have excellent computational power for training such a deep neural network on a very huge dataset consisting of high resolution images.
-* This is where cloud computation will come into the picture which will allow us to do three main things: 1. Store the Dataset on Cloud and import it directly. 2. Train the CNN Model using GPU in the Cloud. 3. Store the resultant h5 files on cloud. 4. Run the prediction algorithms directly onto these stored output h5 files.
-
+* Because of such a deep classification model, we need to have excellent computational power for training on a huge dataset.
+* This is where cloud computation on Kaggle leveraging GPU comes into the picture.
 ## How To Use
 
 1. Download all the python modules as mentioned in the file ‘requirements.pdf’.
