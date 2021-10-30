@@ -4,20 +4,43 @@
 
 <h3 align="center">Predictive & Prescriptive Analysis of Plant Diseases from Topographical Scans</h3> -->
 
+<h1 align="center">
+  <br>
+  <img src="https://github.com/Shreyas-l/AmWell/blob/main/Documentation/AmWell.png" alt="Markdownify" width="200">
+  <br>
+  Dr. FarmAI - Predictive & Prescriptive Analysis of Plant Diseases from Topographical Scans
+  <br>
+</h1>
+
+<h3 align="center">TechStack</h3>
+
+<p align="center">
+
+<div align="center"><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/angular-icon.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/bootstrap.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/eslint.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/jasmine.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/javascript.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/karma.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/protactor.svg"/><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/typescript-icon.svg"/></div>
+</p>
+
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#demo">Demonstration</a> •
+  <a href="#cnn">CNN Implementation</a> •
+  <a href="#demo">Demonstration</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#pub">Research Publication</a>
+</p>
+
+<div id="overview"></div>
+
 ## Overview
 
 ![Intro](https://user-images.githubusercontent.com/58290353/137613411-71a7b671-6e72-4cdd-8ad4-f0cbfd2cbf2c.png)
 
-## Tech Stack
+<div id="demo"></div>
 
-<p align="center">
- <div align="center"><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/python.png.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/docker.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/squid.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/spacy.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/gcp_.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/redis.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/postgres.png"/><img width="55" src="https://github.com/Shreyas-l/DataSec.AI/blob/main/Documentation/k8_.png"/></div>
-</p>
-
-## Demo
+## Demonstration
 
 https://user-images.githubusercontent.com/58290353/137632130-cc62138d-8061-4b29-b6d1-67910a116ad6.mp4
 
+<div id="cnn"></div>
 
 ## CNN Implementation
 
@@ -35,6 +58,8 @@ https://user-images.githubusercontent.com/58290353/137632130-cc62138d-8061-4b29-
 * Because of the deep CNN, we need to have excellent computational power for training on a huge dataset.
 * This is where cloud computation on Kaggle leveraging GPU comes into the picture.
 
+<div id="how-to-use"></div>
+
 ## How To Use
 
 1. Download all the python modules as mentioned in the file ‘requirements.pdf’.
@@ -50,6 +75,8 @@ https://user-images.githubusercontent.com/58290353/137632130-cc62138d-8061-4b29-
 1. Click on ‘Predict’ Button to see the analysis results.
 1. Incase of Farby Analysis, choose an image belonging to a particular class from the Farby dataset and click on ‘Predict’ Button to see the analysis results.
 1. Click on the ’Solutions’ tab to seek the solutions for the detected disease.
+
+<div id="pub"></div>
 
 ## Research Publication
 
