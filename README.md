@@ -5,9 +5,6 @@
 <h3 align="center">Predictive & Prescriptive Analysis of Plant Diseases from Topographical Scans</h3> -->
 
 <h1 align="center">
-  <br>
-  <img src="https://github.com/Shreyas-l/AmWell/blob/main/Documentation/AmWell.png" alt="Markdownify" width="200">
-  <br>
   Dr. FarmAI - Predictive & Prescriptive Analysis of Plant Diseases from Topographical Scans
   <br>
 </h1>
